@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <h1>Employee Management System</h1>
+
+    <h2>Search Employees</h2>
+    <input type="text" id="searchInput" placeholder="Search by First Name, Last Name, Address, or City">
+    <button onclick="searchEmployees()">Search</button>
+    
+    <!-- Form for adding a new employee -->
+    <h2>Add Employee</h2>
+    <table id="addEmployeeForm">
+        <thead>
+            <tr>
+                
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                
+                <td><input type="text" id="firstName" placeholder="First Name" required></td>
+                <td><input type="text" id="lastName" placeholder="Last Name" required></td>
+                <td><input type="text" id="address" placeholder="Address" required></td>
+                <td><input type="text" id="city" placeholder="City" required></td>
+                <td><button onclick="addEmployee()">Add</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Table to display employees -->
+    <h2>Employees</h2>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>PersonID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="employeeData">
+            <!-- Employee data will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
